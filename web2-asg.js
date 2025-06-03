@@ -29,17 +29,17 @@ window.addEventListener("DOMContentLoaded", () => {
     const maxSize = 10; // 星の最大サイズを指定
 
     const left = Math.random() * 100;
-    shootingStar.style.top = `0%`;
+    shootingStar.style.top = `0vh`;
     shootingStar.style.left = `${left}vw`;
     const size = Math.random() * (maxSize - minSize) + minSize;
     shootingStar.style.width = `${size}px`;
     shootingStar.style.height = `${size}px`;
     document.body.appendChild(shootingStar);
 
-    // 2秒後に流れ星を消す
+    // 10秒後に流れ星を消す
     setTimeout(() => {
       shootingStar.remove();
-    }, 2000);
+    }, 10000);
   }
   setInterval(() => {
     create_shooting();
