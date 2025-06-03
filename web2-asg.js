@@ -17,8 +17,31 @@ window.addEventListener("DOMContentLoaded", () => {
     stars.appendChild(starEl);
   };
 
-  // 星を600個生成
-  for (let i = 0; i < 600; i++) {
+  // 星を500個生成
+  for (let i = 0; i < 500; i++) {
     createStar();
   }
+
+  function create_shooting() {
+    const shootingStar = document.createElement("span");
+    shootingStar.className = "shooting-star";
+    const minSize = 5; // 星の最小サイズを指定
+    const maxSize = 10; // 星の最大サイズを指定
+
+    const left = Math.random() * 100;
+    shootingStar.style.top = `0%`;
+    shootingStar.style.left = `${left}vw`;
+    const size = Math.random() * (maxSize - minSize) + minSize;
+    shootingStar.style.width = `${size}px`;
+    shootingStar.style.height = `${size}px`;
+    document.body.appendChild(shootingStar);
+
+    // 2秒後に流れ星を消す
+    setTimeout(() => {
+      shootingStar.remove();
+    }, 2000);
+  }
+  setInterval(() => {
+    create_shooting();
+  }, Math.random() * 1000 + 1000);
 });
