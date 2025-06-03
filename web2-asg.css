@@ -16,8 +16,8 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 200vw;
-  height: 200vw;
+  width: 130vw;
+  height: 130vw;
   border-radius: 50%;
   background-image: linear-gradient(#18192e, #18192e);
   overflow: hidden;
