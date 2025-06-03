@@ -36,10 +36,10 @@ window.addEventListener("DOMContentLoaded", () => {
     shootingStar.style.height = `${size}px`;
     document.body.appendChild(shootingStar);
 
-    // 10秒後に流れ星を消す
+    // 3秒後に流れ星を消す
     setTimeout(() => {
       shootingStar.remove();
-    }, 10000);
+    }, 3000);
   }
   setInterval(() => {
     create_shooting();
